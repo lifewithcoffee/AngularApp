@@ -27,9 +27,6 @@ export class FetchDataComponent {
  * The interface of WeatherForecast object returned from server API /weatherforecast
  */
 interface WeatherForecast {
-  /**
-   * 
-   */
   date: string;
   temperatureC: number;
   temperatureF: number;
