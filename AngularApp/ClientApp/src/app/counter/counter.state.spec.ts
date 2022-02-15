@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CounterService } from './counter.state.service';
+import { CounterStateService } from './counter.state';
 
 describe('CounterService', () => {
-  let service: CounterService;
+  let service: CounterStateService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(CounterService);
+    service = TestBed.inject(CounterStateService);
   });
 
   it('should be created', () => {

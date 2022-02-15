@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { CounterService } from './counter.state.service';
-import { CounterState } from './counter.state';
+import { CounterState, CounterStateService } from './counter.state';
 
 /**
  * Declare "providers: [ CounterService ]" to make sure each CounterComponent
@@ -18,7 +17,7 @@ export class CounterComponent implements OnInit, OnDestroy {
   private subscription?: Subscription;
   public state: CounterState = <CounterState>{};
 
-  constructor(private counterService: CounterService) { }
+  constructor(private counterService: CounterStateService) { }
 
   ngOnInit(): void {
     this.subscription = this.counterService.values$.subscribe(
