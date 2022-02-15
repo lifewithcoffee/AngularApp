@@ -27,6 +27,7 @@ import { CounterListComponent } from './counter-list/counter-list.component';
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
+      { path: 'counter-list', component: CounterListComponent },
       { path: 'fetch-data', component: FetchDataComponent },
     ])
   ],
