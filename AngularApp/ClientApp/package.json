@@ -8,6 +8,7 @@
     "build:ssr": "ng run AngularApp:server:dev",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "test-headless": "ng test --browsers=\"ChromeHeadless\"",
     "docs": "npx typedoc --out docs --entryPointStrategy expand src/app/"
   },
   "private": true,
