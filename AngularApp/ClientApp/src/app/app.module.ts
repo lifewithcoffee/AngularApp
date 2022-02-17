@@ -13,6 +13,9 @@ import { CounterListComponent } from './counter-list/counter-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatSliderModule } from '@angular/material/slider';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { MatSliderModule } from '@angular/material/slider';
       { path: 'fetch-data', component: FetchDataComponent },
     ]),
     BrowserAnimationsModule,
-    MatSliderModule
+    MatSliderModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
