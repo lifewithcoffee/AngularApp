@@ -1,4 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
+import { MatSelectionListChange } from '@angular/material/list';
 import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
@@ -13,6 +14,11 @@ export class AppComponent {
   showSubmenu = true;
   isShowing = true;
   showSubSubMenu = true;
+  isSelected = true;
+
+  onListSelectionChange(evt: MatSelectionListChange){
+    console.log(evt.source);
+  }
 
   mouseenter() {
     if (!this.isExpanded) {
