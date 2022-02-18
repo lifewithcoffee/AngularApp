@@ -10,14 +10,16 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { CounterListComponent } from './counter-list/counter-list.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ListDemoComponent } from './list-demo/list-demo.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { ReactiveFormsModule } from '@angular/forms';
 // import {  } from '@angular/material/';
 
 @NgModule({
@@ -27,10 +29,12 @@ import { MatListModule } from '@angular/material/list';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    CounterListComponent
+    CounterListComponent,
+    ListDemoComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
+    ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
@@ -38,6 +42,7 @@ import { MatListModule } from '@angular/material/list';
       { path: 'counter', component: CounterComponent },
       { path: 'counter-list', component: CounterListComponent },
       { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'list-demo', component: ListDemoComponent },
     ]),
     BrowserAnimationsModule,
     MatSliderModule,
