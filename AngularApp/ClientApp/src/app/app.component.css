@@ -13,3 +13,8 @@
 .example-sidenav {
    user-select: none;
 }
+
+/* _note_: directly apply style to the angular material's element */
+mat-icon {
+  padding-right: 30px;
+}
