@@ -22,6 +22,7 @@
 	<mat-sidenav #sidenav class="example-sidenav" mode="side" opened="isExpanded" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
 
 		<!-- _note_: wrapping <mat-nav-list> around <a> to remove underlines -->
+		<!-- _note_: icon list: http://google.github.io/material-design-icons/#icon-font-for-the-web |icon| -->
 		<mat-nav-list>
 			<a mat-list-item href="https://www.concretepage.com/java/java-8/" > External link: Java </a>
 			<a mat-list-item [routerLink]="['counter']" ><mat-icon>book</mat-icon>Counter</a>
