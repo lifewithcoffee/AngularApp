@@ -7,10 +7,20 @@
   </button>
   <span>My App</span>
   <span class="example-spacer"></span>
+	
+	<!-- _note_: <mat-tab-nav-bar> |tab| -->
+	<nav mat-tab-nav-bar color="#FFFFFF">
+		<!-- _note_: if routerLink="/" the routerLinkActive will always be matched -->
+		<a mat-tab-link routerLink="/counter" routerLinkActive="active-link">Counter</a>
+		<a mat-tab-link routerLink="/counter-list" routerLinkActive="active-link">Counter List</a>
+	</nav>
+	<hr>
+
   <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
     <mat-icon>favorite</mat-icon>
   </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+  <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"> -->
+  <button mat-icon-button>
     <mat-icon>share</mat-icon>
   </button>
 </mat-toolbar>
@@ -22,12 +32,13 @@
 	<mat-sidenav #sidenav class="example-sidenav" mode="side" opened="isExpanded" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
 
 		<!-- _note_: wrapping <mat-nav-list> around <a> to remove underlines -->
-		<!-- _note_: icon list: http://google.github.io/material-design-icons/#icon-font-for-the-web |icon| -->
+		<!-- _note_: icon list (replace spaces with '_'): http://google.github.io/material-design-icons/#which-icons-should-be-mirrored-for-rtl- |icon| -->
 		<mat-nav-list>
 			<a mat-list-item href="https://www.concretepage.com/java/java-8/" > External link: Java </a>
-			<a mat-list-item [routerLink]="['counter']" ><mat-icon>book</mat-icon>Counter</a>
-			<a mat-list-item [routerLink]="['counter-list']" ><mat-icon>cloud</mat-icon>Counter List</a>
-			<a mat-list-item [routerLink]="['list-demo']" ><mat-icon>dvr</mat-icon>List Demo</a>
+			<a mat-list-item [routerLink]="['counter']" routerLinkActive="active-link"><mat-icon>book</mat-icon>Counter</a>
+			<a mat-list-item [routerLink]="['counter-list']" routerLinkActive="active-link"><mat-icon>cloud</mat-icon>Counter List</a>
+			<a mat-list-item [routerLink]="['list-demo']" routerLinkActive="active-link"><mat-icon>dvr</mat-icon>List Demo</a>
+			<a mat-list-item [routerLink]="['tab-demo']" routerLinkActive="active-link"><mat-icon>call_split</mat-icon>Tab Demo</a>
 		</mat-nav-list> 
 		<hr>
 

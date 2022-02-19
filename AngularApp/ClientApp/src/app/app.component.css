@@ -14,7 +14,13 @@
    user-select: none;
 }
 
-/* _note_: directly apply style to the angular material's element */
+/* _note_: directly apply style to the angular material's element |style| */
 mat-icon {
   padding-right: 30px;
 }
+
+/* nav tabs */
+.active-link {
+  color: red;
+  background-color: aquamarine;
+} 
