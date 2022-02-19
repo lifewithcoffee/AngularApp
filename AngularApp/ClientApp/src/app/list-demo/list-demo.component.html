@@ -1,0 +1,11 @@
+<h3>mat-selection-list and mat-list-option</h3>
+
+<!-- _note_: <form>/<mat-selection-list>/<mat-list-option> |form| -->
+<form [formGroup]="techForm" (ngSubmit)="onFormSubmit()">
+  <mat-selection-list formControlName="selectedTech">
+    <mat-list-option *ngFor="let tech of techList" [value]="tech">
+      {{tech.lang}}
+    </mat-list-option>
+  </mat-selection-list>
+  <button mat-raised-button color="warn">Submit</button>
+</form> 

@@ -1,6 +1,69 @@
-<body>
-  <app-nav-menu></app-nav-menu>
-  <div class="container">
-    <router-outlet></router-outlet>
-  </div>
-</body>
+<!-- _note_: <mat-toolbar> -->
+<mat-toolbar color="primary">
+
+	<!-- _note_sidenav-2: use template variable 'sidenav' to toggle <mat-sidenav> -->
+  <button (click)="sidenav.toggle(); isExpanded = !isExpanded" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>My App</span>
+  <span class="example-spacer"></span>
+	
+	<!-- _note_: <mat-tab-nav-bar> |tab| -->
+	<nav mat-tab-nav-bar color="#FFFFFF">
+		<!-- _note_: if routerLink="/" the routerLinkActive will always be matched -->
+		<a mat-tab-link routerLink="/counter" routerLinkActive="active-link">Counter</a>
+		<a mat-tab-link routerLink="/counter-list" routerLinkActive="active-link">Counter List</a>
+	</nav>
+	<hr>
+
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"> -->
+  <button mat-icon-button>
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
+
+<!-- <mat-sidenav-container>/<mat-sidenav>,<mat-sidenav-content> -->
+<mat-sidenav-container class="example-container" autosize>
+
+	<!-- _note_sidenav-1: declare template varialbe 'sidenav' -->
+	<mat-sidenav #sidenav class="example-sidenav" mode="side" opened="isExpanded" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
+
+		<!-- _note_: wrapping <mat-nav-list> around <a> to remove underlines -->
+		<!-- _note_: icon list (replace spaces with '_'): http://google.github.io/material-design-icons/#which-icons-should-be-mirrored-for-rtl- |icon| -->
+		<mat-nav-list>
+			<a mat-list-item href="https://www.concretepage.com/java/java-8/" > External link: Java </a>
+			<a mat-list-item [routerLink]="['counter']" routerLinkActive="active-link"><mat-icon>book</mat-icon>Counter</a>
+			<a mat-list-item [routerLink]="['counter-list']" routerLinkActive="active-link"><mat-icon>cloud</mat-icon>Counter List</a>
+			<a mat-list-item [routerLink]="['list-demo']" routerLinkActive="active-link"><mat-icon>dvr</mat-icon>List Demo</a>
+			<a mat-list-item [routerLink]="['tab-demo']" routerLinkActive="active-link"><mat-icon>call_split</mat-icon>Tab Demo</a>
+		</mat-nav-list> 
+		<hr>
+
+		<!-- _note_: <mat-selection-list>/<mat-list-option> -->
+		<mat-selection-list color="primary" (selectionChange)="onListSelectionChange($event)">
+			<mat-list-option>Murdeshwar</mat-list-option>
+			<mat-list-option [selected]="isSelected">Varanasi</mat-list-option>
+			<mat-list-option disabled="true">Noida</mat-list-option>
+			<mat-list-option>Bhopal</mat-list-option>
+		</mat-selection-list> 
+		<hr>
+
+		<!-- _note_: <mat-list>/<mat-list-item> -->
+		<mat-list>
+			<mat-list-item>Suresh</mat-list-item>
+			<mat-list-item>Mahesh</mat-list-item>
+			<mat-list-item>Krishna</mat-list-item>
+		</mat-list> 
+		<hr>
+	</mat-sidenav>
+
+  <mat-sidenav-content>
+    <app-nav-menu></app-nav-menu>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,30 @@
+.tab-group-box {
+  border-bottom: 1px solid #dddddd;
+}
+
+/* _note_box-1: split css class into 2 parts */
+.example-small-box, .example-large-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px;
+  padding: 16px;
+  border-radius: 3px;
+}
+
+/* _note_box-2: split css class into 2 parts */
+.example-small-box {
+  height: 100px;
+  width: 100px;
+}
+
+.example-large-box {
+  height: 300px;
+  width: 300px;
+}
+
+.example-input-label,
+.example-add-tab-button,
+.example-delete-tab-button {
+  margin: 8px;
+}
