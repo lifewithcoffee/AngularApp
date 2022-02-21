@@ -21,6 +21,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';   // _note_dialog-1: also import MatDialogRef
 
 /**
  * _note_datepicker-1: import both following modules    |date|datepicker|
@@ -39,6 +40,7 @@ import { TabDemoComponent } from './tab-demo/tab-demo.component';
 import { MatTabsModule } from '@angular/material/tabs'; 
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ExpansionDemoComponent } from './expansion-demo/expansion-demo.component';
+import { DialogDemoComponent } from './dialog-demo/dialog-demo.component';
 // import {  } from '@angular/material/';
 
 @NgModule({
@@ -52,6 +54,7 @@ import { ExpansionDemoComponent } from './expansion-demo/expansion-demo.componen
     ListDemoComponent,
     TabDemoComponent,
     ExpansionDemoComponent,
+    DialogDemoComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -68,6 +71,7 @@ import { ExpansionDemoComponent } from './expansion-demo/expansion-demo.componen
       { path: 'list-demo', component: ListDemoComponent },
       { path: 'tab-demo', component: TabDemoComponent },
       { path: 'expansion-demo', component: ExpansionDemoComponent },
+      { path: 'dialog-demo', component: DialogDemoComponent },
     ]),
     BrowserAnimationsModule,
     MatSliderModule,
@@ -80,9 +84,16 @@ import { ExpansionDemoComponent } from './expansion-demo/expansion-demo.componen
     MatCheckboxModule,
     MatExpansionModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatDialogModule
   ],
-  providers: [MatDatepickerModule],   // _note_datepicker-2: need to add MatDatepickerModule to providers
+  providers: [
+    MatDatepickerModule,      // _note_datepicker-2: need to add MatDatepickerModule to providers
+    {
+      provide: MatDialogRef,  // _note_dialog-2: add MatDialogRef to providers
+      useValue: {}
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
