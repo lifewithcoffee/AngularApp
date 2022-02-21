@@ -11,6 +11,7 @@ export class ExpansionDemoComponent implements OnInit {
   @ViewChild(MatAccordion) accordion1?: MatAccordion; // _note_: use @ViewChild(MatAccordion)
 
   panelOpenState = false;
+  step = 0;
 
   constructor() { }
 
@@ -19,5 +20,17 @@ export class ExpansionDemoComponent implements OnInit {
 
   openAllPanels() {
     this.accordion1?.openAll();
+  }
+
+  setStep(index: number) {
+    this.step = index;
+  }
+
+  nextStep() {
+    this.step++;
+  }
+
+  prevStep() {
+    this.step--;
   }
 }

@@ -23,6 +23,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatExpansionModule } from '@angular/material/expansion';
 
 /**
+ * _note_datepicker-1: import both following modules    |date|datepicker|
+ */
+import { MatDatepickerModule } from '@angular/material/datepicker'
+import { MatNativeDateModule } from '@angular/material/core';
+
+/**
  * _note_: always import 'MatInputModule' when importing 'MatFormFieldModule'     |form|
  * otherwise, using <mat-form-field> will get error 'mat-form-field must contain a MatFormFieldControl'
  */
@@ -72,9 +78,11 @@ import { ExpansionDemoComponent } from './expansion-demo/expansion-demo.componen
     MatListModule,
     MatTabsModule,
     MatCheckboxModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
-  providers: [],
+  providers: [MatDatepickerModule],   // _note_datepicker-2: need to add MatDatepickerModule to providers
   bootstrap: [AppComponent]
 })
 export class AppModule { }
