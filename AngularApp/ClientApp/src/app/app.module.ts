@@ -20,6 +20,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 /**
  * _note_: always import 'MatInputModule' when importing 'MatFormFieldModule'     |form|
@@ -31,6 +32,7 @@ import { MatInputModule } from '@angular/material/input';
 import { TabDemoComponent } from './tab-demo/tab-demo.component';
 import { MatTabsModule } from '@angular/material/tabs'; 
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { ExpansionDemoComponent } from './expansion-demo/expansion-demo.component';
 // import {  } from '@angular/material/';
 
 @NgModule({
@@ -43,6 +45,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     CounterListComponent,
     ListDemoComponent,
     TabDemoComponent,
+    ExpansionDemoComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -58,6 +61,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'list-demo', component: ListDemoComponent },
       { path: 'tab-demo', component: TabDemoComponent },
+      { path: 'expansion-demo', component: ExpansionDemoComponent },
     ]),
     BrowserAnimationsModule,
     MatSliderModule,
@@ -67,7 +71,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatSidenavModule,
     MatListModule,
     MatTabsModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
