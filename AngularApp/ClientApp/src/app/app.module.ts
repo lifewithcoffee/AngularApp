@@ -39,6 +39,7 @@ import { TabDemoComponent } from './tab-demo/tab-demo.component';
 import { MatTabsModule } from '@angular/material/tabs'; 
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ExpansionDemoComponent } from './expansion-demo/expansion-demo.component';
+import { DialogDemoComponent } from './dialog-demo/dialog-demo.component';
 // import {  } from '@angular/material/';
 
 @NgModule({
@@ -52,6 +53,7 @@ import { ExpansionDemoComponent } from './expansion-demo/expansion-demo.componen
     ListDemoComponent,
     TabDemoComponent,
     ExpansionDemoComponent,
+    DialogDemoComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -68,6 +70,7 @@ import { ExpansionDemoComponent } from './expansion-demo/expansion-demo.componen
       { path: 'list-demo', component: ListDemoComponent },
       { path: 'tab-demo', component: TabDemoComponent },
       { path: 'expansion-demo', component: ExpansionDemoComponent },
+      { path: 'dialog-demo', component: DialogDemoComponent },
     ]),
     BrowserAnimationsModule,
     MatSliderModule,
