@@ -21,7 +21,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';   // _note_dialog-1: also import MatDialogRef
 
 /**
  * _note_datepicker-1: import both following modules    |date|datepicker|
@@ -88,9 +88,9 @@ import { DialogDemoComponent } from './dialog-demo/dialog-demo.component';
     MatDialogModule
   ],
   providers: [
-    MatDatepickerModule,     // _note_datepicker-2: need to add MatDatepickerModule to providers
+    MatDatepickerModule,      // _note_datepicker-2: need to add MatDatepickerModule to providers
     {
-      provide: MatDialogRef,
+      provide: MatDialogRef,  // _note_dialog-2: add MatDialogRef to providers
       useValue: {}
     },
   ],
