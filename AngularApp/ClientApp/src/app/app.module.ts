@@ -23,6 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';   // _note_dialog-1: also import MatDialogRef
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatTreeModule } from '@angular/material/tree';
 
 /**
  * _note_datepicker-1: import both following modules    |date|datepicker|
@@ -42,6 +43,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ExpansionDemoComponent } from './expansion-demo/expansion-demo.component';
 import { DialogDemoComponent } from './dialog-demo/dialog-demo.component';
+import { TreeDemoComponent } from './tree-demo/tree-demo.component';
 // import {  } from '@angular/material/';
 
 @NgModule({
@@ -56,6 +58,7 @@ import { DialogDemoComponent } from './dialog-demo/dialog-demo.component';
     TabDemoComponent,
     ExpansionDemoComponent,
     DialogDemoComponent,
+    TreeDemoComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -87,7 +90,8 @@ import { DialogDemoComponent } from './dialog-demo/dialog-demo.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatDialogModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatTreeModule
   ],
   providers: [
     MatDatepickerModule,      // _note_datepicker-2: need to add MatDatepickerModule to providers
