@@ -76,6 +76,7 @@ import { TreeDemoComponent } from './tree-demo/tree-demo.component';
       { path: 'tab-demo', component: TabDemoComponent },
       { path: 'expansion-demo', component: ExpansionDemoComponent },
       { path: 'dialog-demo', component: DialogDemoComponent },
+      { path: 'tree-demo', component: TreeDemoComponent },
     ]),
     BrowserAnimationsModule,
     MatSliderModule,
