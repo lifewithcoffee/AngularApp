@@ -19,3 +19,14 @@
 <mat-slider min="1" max="100" step="1" value="50"></mat-slider>
 
 <button mat-button (click)="openCompDialog()">Open Comp Modal</button>
+
+<hr>
+
+<mat-slider [(ngModel)]="progressValue"></mat-slider>
+
+<mat-progress-spinner
+  class="example-margin"
+  [color]="color"
+  [mode]="mode"
+  [value]="progressValue">
+</mat-progress-spinner>

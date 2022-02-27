@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { ThemePalette } from '@angular/material/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
 import { DialogDemoComponent } from '../dialog-demo/dialog-demo.component';
 
 @Component({
@@ -10,6 +12,10 @@ import { DialogDemoComponent } from '../dialog-demo/dialog-demo.component';
 export class HomeComponent {
   myFooList = ['Some Item', 'Item Second', 'Other In Row', 'What to write', 'Blah To Do']
   
+  color: ThemePalette = 'primary';
+  mode: ProgressSpinnerMode = 'determinate';
+  progressValue = 90;
+
   constructor(public dialog: MatDialog) {}
   
   openCompDialog() {
