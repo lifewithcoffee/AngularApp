@@ -24,6 +24,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';   // _note_dialog-1: also import MatDialogRef
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTreeModule } from '@angular/material/tree';
+import { MatCardModule } from '@angular/material/card';
+import { MatProgressBarModule } from '@angular/material/progress-bar'
 
 /**
  * _note_datepicker-1: import both following modules    |date|datepicker|
@@ -92,7 +94,9 @@ import { TreeDemoComponent } from './tree-demo/tree-demo.component';
     MatNativeDateModule,
     MatDialogModule,
     MatProgressSpinnerModule,
-    MatTreeModule
+    MatTreeModule,
+    MatCardModule,
+    MatProgressBarModule
   ],
   providers: [
     MatDatepickerModule,      // _note_datepicker-2: need to add MatDatepickerModule to providers
