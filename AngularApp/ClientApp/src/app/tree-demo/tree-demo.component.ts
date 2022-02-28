@@ -79,4 +79,8 @@ export class TreeDemoComponent implements OnInit {
     this.treeControl.expand(this.treeControl.dataNodes[4]);
     this.treeControl.expand(this.treeControl.dataNodes[8]);
   }
+
+  selected(node: ExampleFlatNode){
+    console.log(node);
+  }
 }

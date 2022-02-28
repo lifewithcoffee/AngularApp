@@ -7,7 +7,9 @@
 
     <!-- use a disabled button to provide padding for tree leaf -->
     <button mat-icon-button disabled></button>
-    {{node.name}}
+
+    <!-- _note_: <a mat-button> -->
+    <a mat-button (click)="selected(node)">{{node.name}}</a>
   </mat-tree-node>
 
   <!-- This is the tree node template for expandable nodes -->
@@ -17,11 +19,12 @@
   -->
   <mat-tree-node *matTreeNodeDef="let node; when: hasChild" matTreeNodePadding>
     <button mat-icon-button matTreeNodeToggle
-            [attr.aria-label]="'toggle ' + node.name">
+            [attr.aria-label]="'toggle ' + node.name"
+            (click)="selected(node)">
       <mat-icon class="mat-icon-rtl-mirror">
         {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
       </mat-icon>
+      {{node.name}}
     </button>
-    {{node.name}}
   </mat-tree-node>
 </mat-tree>
