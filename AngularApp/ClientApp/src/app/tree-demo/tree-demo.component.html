@@ -1,12 +1,21 @@
+<h4>Flat tree demo</h4>
+
 <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+
   <!-- This is the tree node template for leaf nodes -->
   <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+
     <!-- use a disabled button to provide padding for tree leaf -->
     <button mat-icon-button disabled></button>
     {{node.name}}
   </mat-tree-node>
+
   <!-- This is the tree node template for expandable nodes -->
-  <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+  <!--
+    _note_: for matTreeNodeDef
+    see: https://stackoverflow.com/questions/55490198/angular-mat-tree-on-mattreenodedef-iteration-not-able-to-get-index-as-of-ngfor
+  -->
+  <mat-tree-node *matTreeNodeDef="let node; when: hasChild" matTreeNodePadding>
     <button mat-icon-button matTreeNodeToggle
             [attr.aria-label]="'toggle ' + node.name">
       <mat-icon class="mat-icon-rtl-mirror">
