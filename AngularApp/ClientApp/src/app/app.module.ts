@@ -15,19 +15,15 @@ import { ListDemoComponent } from './list-demo/list-demo.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';   // _note_dialog-1: also import MatDialogRef
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatTreeModule } from '@angular/material/tree';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-
 
 /**
  * _note_datepicker-1: import both following modules    |date|datepicker|
@@ -47,8 +43,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ExpansionDemoComponent } from './expansion-demo/expansion-demo.component';
 import { DialogDemoComponent } from './dialog-demo/dialog-demo.component';
-import { TreeDemoComponent } from './tree-demo/tree-demo.component';
-import { DatapickerDemoComponent } from './pages/datapicker-demo/datapicker-demo.component';
+import { AppRoutingModule } from './app.routing';
 // import {  } from '@angular/material/';
 
 const appRoutes: Routes = [
@@ -60,8 +55,6 @@ const appRoutes: Routes = [
   { path: 'tab-demo', component: TabDemoComponent },
   { path: 'expansion-demo', component: ExpansionDemoComponent },
   { path: 'dialog-demo', component: DialogDemoComponent },
-  { path: 'tree-demo', component: TreeDemoComponent },
-  { path: 'datapicker-demo', component: DatapickerDemoComponent },
 ];
 
 @NgModule({
@@ -76,8 +69,6 @@ const appRoutes: Routes = [
     TabDemoComponent,
     ExpansionDemoComponent,
     DialogDemoComponent,
-    TreeDemoComponent,
-    DatapickerDemoComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -87,11 +78,10 @@ const appRoutes: Routes = [
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
+    AppRoutingModule,
     BrowserAnimationsModule,
     MatSliderModule,
     MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
     MatSidenavModule,
     MatListModule,
     MatTabsModule,
@@ -101,7 +91,6 @@ const appRoutes: Routes = [
     MatNativeDateModule,
     MatDialogModule,
     MatProgressSpinnerModule,
-    MatTreeModule,
     MatCardModule,
     MatProgressBarModule,
     MatAutocompleteModule
