@@ -20,9 +20,7 @@ import { MatListModule } from '@angular/material/list';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';   // _note_dialog-1: also import MatDialogRef
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCardModule } from '@angular/material/card';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 /**
  * _note_datepicker-1: import both following modules    |date|datepicker|
@@ -47,11 +45,6 @@ import { AppRoutingModule } from './app.routing';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: 'counter', component: CounterComponent },
-  { path: 'counter-list', component: CounterListComponent },
-  { path: 'fetch-data', component: FetchDataComponent },
-  { path: 'list-demo', component: ListDemoComponent },
-  { path: 'dialog-demo', component: DialogDemoComponent },
 ];
 
 @NgModule({
@@ -87,9 +80,7 @@ const appRoutes: Routes = [
     MatDatepickerModule,
     MatNativeDateModule,
     MatDialogModule,
-    MatProgressSpinnerModule,
     MatCardModule,
-    MatProgressBarModule,
   ],
   providers: [
     MatDatepickerModule,      // _note_datepicker-2: need to add MatDatepickerModule to providers
