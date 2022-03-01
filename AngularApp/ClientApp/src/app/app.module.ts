@@ -25,7 +25,9 @@ import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';   // _
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatCardModule } from '@angular/material/card';
-import { MatProgressBarModule } from '@angular/material/progress-bar'
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+
 
 /**
  * _note_datepicker-1: import both following modules    |date|datepicker|
@@ -96,7 +98,8 @@ import { TreeDemoComponent } from './tree-demo/tree-demo.component';
     MatProgressSpinnerModule,
     MatTreeModule,
     MatCardModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatAutocompleteModule
   ],
   providers: [
     MatDatepickerModule,      // _note_datepicker-2: need to add MatDatepickerModule to providers
