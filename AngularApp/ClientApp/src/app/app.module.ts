@@ -48,6 +48,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ExpansionDemoComponent } from './expansion-demo/expansion-demo.component';
 import { DialogDemoComponent } from './dialog-demo/dialog-demo.component';
 import { TreeDemoComponent } from './tree-demo/tree-demo.component';
+import { DatapickerDemoComponent } from './pages/datapicker-demo/datapicker-demo.component';
 // import {  } from '@angular/material/';
 
 @NgModule({
@@ -63,6 +64,7 @@ import { TreeDemoComponent } from './tree-demo/tree-demo.component';
     ExpansionDemoComponent,
     DialogDemoComponent,
     TreeDemoComponent,
+    DatapickerDemoComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -81,6 +83,7 @@ import { TreeDemoComponent } from './tree-demo/tree-demo.component';
       { path: 'expansion-demo', component: ExpansionDemoComponent },
       { path: 'dialog-demo', component: DialogDemoComponent },
       { path: 'tree-demo', component: TreeDemoComponent },
+      { path: 'datapicker-demo', component: DatapickerDemoComponent },
     ]),
     BrowserAnimationsModule,
     MatSliderModule,
