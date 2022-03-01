@@ -23,7 +23,6 @@ import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';   // _
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 /**
  * _note_datepicker-1: import both following modules    |date|datepicker|
@@ -52,8 +51,6 @@ const appRoutes: Routes = [
   { path: 'counter-list', component: CounterListComponent },
   { path: 'fetch-data', component: FetchDataComponent },
   { path: 'list-demo', component: ListDemoComponent },
-  { path: 'tab-demo', component: TabDemoComponent },
-  { path: 'expansion-demo', component: ExpansionDemoComponent },
   { path: 'dialog-demo', component: DialogDemoComponent },
 ];
 
@@ -93,7 +90,6 @@ const appRoutes: Routes = [
     MatProgressSpinnerModule,
     MatCardModule,
     MatProgressBarModule,
-    MatAutocompleteModule
   ],
   providers: [
     MatDatepickerModule,      // _note_datepicker-2: need to add MatDatepickerModule to providers
