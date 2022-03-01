@@ -18,6 +18,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatCardModule } from '@angular/material/card';
 
 const routes: Routes = [
   { path: 'counter', component: CounterComponent },
@@ -43,6 +44,7 @@ const routes: Routes = [
     MatAutocompleteModule,
     MatProgressSpinnerModule,
     MatProgressBarModule,
+    MatCardModule,
     RouterModule.forChild(routes)
   ],
   exports: [ 
@@ -51,6 +53,7 @@ const routes: Routes = [
     MatAutocompleteModule,
     MatProgressSpinnerModule,
     MatProgressBarModule,
+    MatCardModule,
     RouterModule,
    ]
 })
