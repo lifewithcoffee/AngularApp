@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -51,6 +51,19 @@ import { TreeDemoComponent } from './tree-demo/tree-demo.component';
 import { DatapickerDemoComponent } from './pages/datapicker-demo/datapicker-demo.component';
 // import {  } from '@angular/material/';
 
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: 'counter', component: CounterComponent },
+  { path: 'counter-list', component: CounterListComponent },
+  { path: 'fetch-data', component: FetchDataComponent },
+  { path: 'list-demo', component: ListDemoComponent },
+  { path: 'tab-demo', component: TabDemoComponent },
+  { path: 'expansion-demo', component: ExpansionDemoComponent },
+  { path: 'dialog-demo', component: DialogDemoComponent },
+  { path: 'tree-demo', component: TreeDemoComponent },
+  { path: 'datapicker-demo', component: DatapickerDemoComponent },
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,18 +86,7 @@ import { DatapickerDemoComponent } from './pages/datapicker-demo/datapicker-demo
     MatInputModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'counter-list', component: CounterListComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
-      { path: 'list-demo', component: ListDemoComponent },
-      { path: 'tab-demo', component: TabDemoComponent },
-      { path: 'expansion-demo', component: ExpansionDemoComponent },
-      { path: 'dialog-demo', component: DialogDemoComponent },
-      { path: 'tree-demo', component: TreeDemoComponent },
-      { path: 'datapicker-demo', component: DatapickerDemoComponent },
-    ]),
+    RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
     MatSliderModule,
     MatToolbarModule,
