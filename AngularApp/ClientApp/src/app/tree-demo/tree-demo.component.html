@@ -5,9 +5,6 @@
   <!-- This is the tree node template for leaf nodes -->
   <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
 
-    <!-- use a disabled button to provide padding for tree leaf -->
-    <button mat-icon-button disabled></button>
-
     <!-- _note_: <a mat-button> -->
     <a mat-button (click)="selected(node)">{{node.name}}</a>
   </mat-tree-node>
