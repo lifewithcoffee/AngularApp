@@ -17,6 +17,20 @@ import { TreeDemoComponent } from './pages/tree-demo/tree-demo.component';
 import { DatapickerDemoComponent } from './pages/datapicker-demo/datapicker-demo.component';
 import { TabDemoComponent } from './pages/tab-demo/tab-demo.component';
 
+/**
+ * _note_datepicker-1: import both following modules    |date|datepicker|
+ */
+import { MatDatepickerModule } from '@angular/material/datepicker'
+import { MatNativeDateModule } from '@angular/material/core';
+
+/**
+ * _note_: always import 'MatInputModule' when importing 'MatFormFieldModule'     |form|
+ * otherwise, using <mat-form-field> will get error 'mat-form-field must contain a MatFormFieldControl'
+ */
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
+/****************************************************************************/
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -36,19 +50,6 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { CounterModule } from './modules/counter/counter.module';
 import { FetchDataModule } from './modules/fetch-data/fetch-data.module';
-
-/**
- * _note_datepicker-1: import both following modules    |date|datepicker|
- */
-import { MatDatepickerModule } from '@angular/material/datepicker'
-import { MatNativeDateModule } from '@angular/material/core';
-
-/**
- * _note_: always import 'MatInputModule' when importing 'MatFormFieldModule'     |form|
- * otherwise, using <mat-form-field> will get error 'mat-form-field must contain a MatFormFieldControl'
- */
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
 import { UsersModule } from './modules/users/users.module';
 
 const appRoutes: Routes = [
