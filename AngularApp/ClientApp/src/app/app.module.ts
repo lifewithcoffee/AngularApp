@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CounterComponent } from './modules/counter/components/counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
+import { FetchDataComponent } from './modules/fetch-data/pages/fetch-data/fetch-data.component';
 import { CounterListComponent } from './modules/counter/pages/counter-list/counter-list.component';
 import { ListDemoComponent } from './pages/list-demo/list-demo.component';
 
@@ -50,11 +50,11 @@ import { DialogDemoComponent } from './components/dialog-demo/dialog-demo.compon
 import { TreeDemoComponent } from './pages/tree-demo/tree-demo.component';
 import { DatapickerDemoComponent } from './pages/datapicker-demo/datapicker-demo.component';
 import { CounterModule } from './modules/counter/counter.module';
+import { FetchDataModule } from './modules/fetch-data/fetch-data.module';
 // import {  } from '@angular/material/';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: 'fetch-data', component: FetchDataComponent },
   { path: 'list-demo', component: ListDemoComponent },
   { path: 'dialog-demo', component: DialogDemoComponent },
   { path: 'tree-demo', component: TreeDemoComponent },
@@ -79,6 +79,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     CounterModule,
+    FetchDataModule,
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     ReactiveFormsModule,
     MatFormFieldModule,
