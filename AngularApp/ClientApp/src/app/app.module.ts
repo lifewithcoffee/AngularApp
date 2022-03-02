@@ -53,17 +53,18 @@ import { FetchDataModule } from './modules/fetch-data/fetch-data.module';
 import { UsersModule } from './modules/users/users.module';
 
 const appRoutes: Routes = [
-  // _note_: redirect '' & '**' to /home (don't forget apply pathMatch: 'full')
-  { path: '', redirectTo: '/home', pathMatch: 'full'},
-  { path: '**', redirectTo: '/home', pathMatch: 'full'},
-  { path: 'home', component: HomeComponent },
-
+  
   { path: 'list-demo', component: ListDemoComponent },
   { path: 'dialog-demo', component: DialogDemoComponent },
   { path: 'tree-demo', component: TreeDemoComponent },
   { path: 'datapicker-demo', component: DatapickerDemoComponent },
   { path: 'tab-demo', component: TabDemoComponent },
   { path: 'expansion-demo', component: ExpansionDemoComponent },
+  
+  // _note_: redirect '' & '**' to /home (NOTE: 1) apply pathMatch: 'full'; 2) must be on the bottom of the routes list)
+  { path: 'home', component: HomeComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: '**', redirectTo: '/home', pathMatch: 'full'},
 ];
 
 @NgModule({
