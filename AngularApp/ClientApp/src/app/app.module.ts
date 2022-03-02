@@ -47,7 +47,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ExpansionDemoComponent } from './expansion-demo/expansion-demo.component';
 import { DialogDemoComponent } from './dialog-demo/dialog-demo.component';
-import { TreeDemoComponent } from './tree-demo/tree-demo.component';
+import { TreeDemoComponent } from './pages/tree-demo/tree-demo.component';
 import { DatapickerDemoComponent } from './pages/datapicker-demo/datapicker-demo.component';
 // import {  } from '@angular/material/';
 
