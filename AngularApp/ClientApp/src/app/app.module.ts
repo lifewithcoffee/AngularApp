@@ -11,6 +11,10 @@ import { CounterComponent } from './modules/counter/components/counter/counter.c
 import { FetchDataComponent } from './modules/fetch-data/pages/fetch-data/fetch-data.component';
 import { CounterListComponent } from './modules/counter/pages/counter-list/counter-list.component';
 import { ListDemoComponent } from './pages/list-demo/list-demo.component';
+import { ExpansionDemoComponent } from './pages/expansion-demo/expansion-demo.component';
+import { DialogDemoComponent } from './components/dialog-demo/dialog-demo.component';
+import { TreeDemoComponent } from './pages/tree-demo/tree-demo.component';
+import { DatapickerDemoComponent } from './pages/datapicker-demo/datapicker-demo.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
@@ -45,10 +49,6 @@ import { MatInputModule } from '@angular/material/input';
 import { TabDemoComponent } from './pages/tab-demo/tab-demo.component';
 import { MatTabsModule } from '@angular/material/tabs'; 
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { ExpansionDemoComponent } from './pages/expansion-demo/expansion-demo.component';
-import { DialogDemoComponent } from './components/dialog-demo/dialog-demo.component';
-import { TreeDemoComponent } from './pages/tree-demo/tree-demo.component';
-import { DatapickerDemoComponent } from './pages/datapicker-demo/datapicker-demo.component';
 import { CounterModule } from './modules/counter/counter.module';
 import { FetchDataModule } from './modules/fetch-data/fetch-data.module';
 // import {  } from '@angular/material/';
@@ -76,6 +76,7 @@ const appRoutes: Routes = [
     ExpansionDemoComponent,
     DialogDemoComponent,
     TreeDemoComponent,
+    DatapickerDemoComponent,
   ],
   imports: [
     CounterModule,
