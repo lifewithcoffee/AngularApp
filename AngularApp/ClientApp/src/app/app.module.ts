@@ -42,7 +42,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
-import { TabDemoComponent } from './tab-demo/tab-demo.component';
+import { TabDemoComponent } from './pages/tab-demo/tab-demo.component';
 import { MatTabsModule } from '@angular/material/tabs'; 
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ExpansionDemoComponent } from './expansion-demo/expansion-demo.component';
