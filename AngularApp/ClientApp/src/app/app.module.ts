@@ -15,6 +15,7 @@ import { ExpansionDemoComponent } from './pages/expansion-demo/expansion-demo.co
 import { DialogDemoComponent } from './components/dialog-demo/dialog-demo.component';
 import { TreeDemoComponent } from './pages/tree-demo/tree-demo.component';
 import { DatapickerDemoComponent } from './pages/datapicker-demo/datapicker-demo.component';
+import { TabDemoComponent } from './pages/tab-demo/tab-demo.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
@@ -31,7 +32,10 @@ import { MatTreeModule } from '@angular/material/tree';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-
+import { MatTabsModule } from '@angular/material/tabs'; 
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { CounterModule } from './modules/counter/counter.module';
+import { FetchDataModule } from './modules/fetch-data/fetch-data.module';
 
 /**
  * _note_datepicker-1: import both following modules    |date|datepicker|
@@ -46,15 +50,12 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
-import { TabDemoComponent } from './pages/tab-demo/tab-demo.component';
-import { MatTabsModule } from '@angular/material/tabs'; 
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { CounterModule } from './modules/counter/counter.module';
-import { FetchDataModule } from './modules/fetch-data/fetch-data.module';
-// import {  } from '@angular/material/';
-
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent, pathMatch: 'full' },
+  // _note_: redirect '' & '**' to /home (don't forget apply pathMatch: 'full')
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: '**', redirectTo: '/home', pathMatch: 'full'},
+  { path: 'home', component: HomeComponent },
+
   { path: 'list-demo', component: ListDemoComponent },
   { path: 'dialog-demo', component: DialogDemoComponent },
   { path: 'tree-demo', component: TreeDemoComponent },
