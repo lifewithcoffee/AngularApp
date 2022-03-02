@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.scss']
+  selector: 'app-user-details',
+  templateUrl: './user-details.component.html',
+  styleUrls: ['./user-details.component.css']
 })
-export class UserComponent implements OnInit {
+export class UserDetailsComponent implements OnInit {
 
   name: any;
 
@@ -17,5 +17,4 @@ export class UserComponent implements OnInit {
       this.name = params['name'];
     });
   }
-
 }
