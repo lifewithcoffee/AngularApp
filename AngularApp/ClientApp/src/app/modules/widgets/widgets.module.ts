@@ -6,11 +6,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { WeatherService } from './services/weather.service';
 import { RoundProgressModule } from 'angular-svg-round-progressbar';
 import { ChartjsComponent } from './pages/chartjs/chartjs.component';
-import { VideojsComponent } from './videojs/videojs.component';
+import { VideojsComponent } from './pages/videojs/videojs.component';
 import { RoundProgressComponent } from './pages/round-progress/round-progress.component';
 
 import { WidgetsRoutingModule } from './widgets.routing';
-import { ViewerjsComponent } from './viewerjs/viewerjs.component';
+import { ViewerjsComponent } from './pages/viewerjs/viewerjs.component';
 import { WidgetListComponent } from './pages/widget-list/widget-list.component';
 
 @NgModule({
