@@ -1,0 +1,18 @@
+<p>
+  videojs works!
+</p>
+
+<video id="video1"
+       class="video-js vjs-default-skin vjs-big-play-centered vjs-16-9"
+       controls preload="auto"
+       width="840"
+       height="464"
+       poster="https://www.fluentu.com/blog/english/wp-content/uploads/sites/4/2017/12/english-medical-vocabulary-2-e1513810099883.jpg"
+       data-setup='{"example_option":true}'>
+	<source id="sourceBox" src="http://static.qiakr.com/movie/0060202.mp4" type='video/mp4'>
+	<p class="vjs-no-js">不支持播放</p>
+</video>
+
+
+<button (click)="play()">play</button>
+<button (click)="pause()">pause</button>
