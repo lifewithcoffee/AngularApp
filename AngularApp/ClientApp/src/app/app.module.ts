@@ -7,9 +7,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
+import { CounterComponent } from './modules/counter/components/counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
-import { CounterListComponent } from './counter-list/counter-list.component';
+import { CounterListComponent } from './modules/counter/pages/counter-list/counter-list.component';
 import { ListDemoComponent } from './pages/list-demo/list-demo.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -49,12 +49,11 @@ import { ExpansionDemoComponent } from './pages/expansion-demo/expansion-demo.co
 import { DialogDemoComponent } from './components/dialog-demo/dialog-demo.component';
 import { TreeDemoComponent } from './pages/tree-demo/tree-demo.component';
 import { DatapickerDemoComponent } from './pages/datapicker-demo/datapicker-demo.component';
+import { CounterModule } from './modules/counter/counter.module';
 // import {  } from '@angular/material/';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: 'counter', component: CounterComponent },
-  { path: 'counter-list', component: CounterListComponent },
   { path: 'fetch-data', component: FetchDataComponent },
   { path: 'list-demo', component: ListDemoComponent },
   { path: 'dialog-demo', component: DialogDemoComponent },
@@ -79,6 +78,7 @@ const appRoutes: Routes = [
     TreeDemoComponent,
   ],
   imports: [
+    CounterModule,
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     ReactiveFormsModule,
     MatFormFieldModule,
