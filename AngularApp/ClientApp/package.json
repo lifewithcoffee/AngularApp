@@ -31,7 +31,10 @@
     "run-script-os": "^1.1.6",
     "rxjs": "~6.6.0",
     "tslib": "^2.1.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "chart.js": "^2.9.4",
+    "video.js": "^6.6.0",
+    "viewerjs": "^1.0.0-beta.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.0.2",
