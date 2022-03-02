@@ -26,13 +26,7 @@
         [(ngModel)]="max"
         (keydown)="reset()">
     </div>
-    <button class="button is-info" *ngIf="currentVal <= 0" (click)="start()">Start</button>
-    <button class="button is-danger" *ngIf="!isFinished" (click)="finish()">Finish</button>
-  </div>
-
-  <hr>
-
-  <div>
-    <app-viewerjs></app-viewerjs>
+    <button mat-raised-button *ngIf="currentVal <= 0" (click)="start()">Start</button>
+    <button mat-raised-button *ngIf="!isFinished" (click)="finish()">Finish</button>
   </div>
 </main>
