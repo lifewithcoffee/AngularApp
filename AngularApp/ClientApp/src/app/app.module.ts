@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
@@ -46,7 +46,7 @@ import { TabDemoComponent } from './pages/tab-demo/tab-demo.component';
 import { MatTabsModule } from '@angular/material/tabs'; 
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ExpansionDemoComponent } from './pages/expansion-demo/expansion-demo.component';
-import { DialogDemoComponent } from './dialog-demo/dialog-demo.component';
+import { DialogDemoComponent } from './components/dialog-demo/dialog-demo.component';
 import { TreeDemoComponent } from './pages/tree-demo/tree-demo.component';
 import { DatapickerDemoComponent } from './pages/datapicker-demo/datapicker-demo.component';
 // import {  } from '@angular/material/';

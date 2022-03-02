@@ -4,7 +4,7 @@ import { ThemePalette } from '@angular/material/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
 import { Observable } from 'rxjs';
-import { DialogDemoComponent } from '../dialog-demo/dialog-demo.component';
+import { DialogDemoComponent } from '../components/dialog-demo/dialog-demo.component';
 import { map, startWith } from 'rxjs/operators';
 
 @Component({
