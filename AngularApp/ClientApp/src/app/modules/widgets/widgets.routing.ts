@@ -1,8 +1,8 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
-import { RoundProgressComponent } from './round-progress/round-progress.component';
-import { ChartjsComponent } from './chartjs/chartjs.component';
+import { RoundProgressComponent } from './pages/round-progress/round-progress.component';
+import { ChartjsComponent } from './pages/chartjs/chartjs.component';
 import { VideojsComponent } from './videojs/videojs.component';
 import { ViewerjsComponent } from './viewerjs/viewerjs.component';
 import { WidgetListComponent } from './pages/widget-list/widget-list.component';

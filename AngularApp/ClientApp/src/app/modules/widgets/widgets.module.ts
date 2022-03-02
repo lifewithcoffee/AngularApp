@@ -5,9 +5,9 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { WeatherService } from './services/weather.service';
 import { RoundProgressModule } from 'angular-svg-round-progressbar';
-import { ChartjsComponent } from './chartjs/chartjs.component';
+import { ChartjsComponent } from './pages/chartjs/chartjs.component';
 import { VideojsComponent } from './videojs/videojs.component';
-import { RoundProgressComponent } from './round-progress/round-progress.component';
+import { RoundProgressComponent } from './pages/round-progress/round-progress.component';
 
 import { WidgetsRoutingModule } from './widgets.routing';
 import { ViewerjsComponent } from './viewerjs/viewerjs.component';
