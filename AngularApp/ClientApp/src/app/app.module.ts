@@ -6,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './pages/home/home.component';
 import { CounterComponent } from './modules/counter/components/counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { CounterListComponent } from './modules/counter/pages/counter-list/counter-list.component';
