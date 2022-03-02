@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 
 import { WeatherService } from './services/weather.service';
 import { RoundProgressModule } from 'angular-svg-round-progressbar';
@@ -16,8 +17,9 @@ import { WidgetListComponent } from './pages/widget-list/widget-list.component';
   imports: [
     CommonModule,
     FormsModule,
+    MatButtonModule,
     RoundProgressModule,
-    WidgetsRoutingModule
+    WidgetsRoutingModule,    
   ],
   exports: [RoundProgressModule],
   declarations: [
