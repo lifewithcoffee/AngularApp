@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { UserComponent } from './user/user.component';
-import { UserListComponent } from './user-list/user-list.component';
+import { UserListComponent } from './pages/user-list/user-list.component';
 
 // _note_: demo of child routes
 const routes: Routes = [
