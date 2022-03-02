@@ -5,9 +5,10 @@ import { RoundProgressComponent } from './round-progress/round-progress.componen
 import { ChartjsComponent } from './chartjs/chartjs.component';
 import { VideojsComponent } from './videojs/videojs.component';
 import { ViewerjsComponent } from './viewerjs/viewerjs.component';
+import { WidgetListComponent } from './pages/widget-list/widget-list.component';
 
 const routes: Routes = [
-  { path: 'widgets', children:[
+  { path: 'widgets', component: WidgetListComponent, children:[
     { path: 'round-progress', component: RoundProgressComponent},
     { path: 'chartjs', component: ChartjsComponent},
     { path: 'videojs', component: VideojsComponent},

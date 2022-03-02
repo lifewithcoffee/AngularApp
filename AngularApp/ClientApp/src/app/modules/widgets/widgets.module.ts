@@ -10,6 +10,7 @@ import { RoundProgressComponent } from './round-progress/round-progress.componen
 
 import { WidgetsRoutingModule } from './widgets.routing';
 import { ViewerjsComponent } from './viewerjs/viewerjs.component';
+import { WidgetListComponent } from './pages/widget-list/widget-list.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { ViewerjsComponent } from './viewerjs/viewerjs.component';
     RoundProgressComponent,
     ChartjsComponent,
     VideojsComponent,
-    ViewerjsComponent
+    ViewerjsComponent,
+    WidgetListComponent
   ],
   providers: [WeatherService]
 })
