@@ -49,6 +49,7 @@ import { MatNativeDateModule } from '@angular/material/core';
  */
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { UsersModule } from './modules/users/users.module';
 
 const appRoutes: Routes = [
   // _note_: redirect '' & '**' to /home (don't forget apply pathMatch: 'full')
@@ -82,6 +83,7 @@ const appRoutes: Routes = [
   imports: [
     CounterModule,
     FetchDataModule,
+    UsersModule,
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     ReactiveFormsModule,
     MatFormFieldModule,
