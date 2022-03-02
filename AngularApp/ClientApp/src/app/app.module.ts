@@ -51,6 +51,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { CounterModule } from './modules/counter/counter.module';
 import { FetchDataModule } from './modules/fetch-data/fetch-data.module';
 import { UsersModule } from './modules/users/users.module';
+import { WidgetsModule } from './modules/widgets/widgets.module';
 
 const appRoutes: Routes = [
   
@@ -86,6 +87,7 @@ const appRoutes: Routes = [
     CounterModule,
     FetchDataModule,
     UsersModule,
+    WidgetsModule,
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     ReactiveFormsModule,
     MatFormFieldModule,
