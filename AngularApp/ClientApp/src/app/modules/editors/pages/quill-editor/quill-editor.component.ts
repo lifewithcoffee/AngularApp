@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Quill from 'quill';
 
 @Component({
   selector: 'app-quill-editor',
@@ -10,6 +11,9 @@ export class QuillEditorComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    let editor = new Quill('#editor', {
+      modules: { toolbar: '#toolbar' },
+      theme: 'snow'
+    });
   }
-
 }
