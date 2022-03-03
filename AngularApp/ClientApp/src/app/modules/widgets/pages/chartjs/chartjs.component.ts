@@ -18,6 +18,16 @@ export class ChartjsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+    /**
+     * _note_: Chart.js 3 is tree-shakeable, so it is necessary to import and register
+     *         the controllers, elements, scales and plugins you are going to use.
+     * from:
+     * https://stackoverflow.com/questions/67238650/problem-for-display-a-chart-with-chart-js-and-angular
+     * 
+     * see also (chartjs doc):
+     * https://www.chartjs.org/docs/latest/getting-started/integration.html#bundlers-webpack-rollup-etc
+     */
     Chart.register(...registerables);
   }
 
