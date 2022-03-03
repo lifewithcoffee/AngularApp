@@ -4,6 +4,11 @@
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
+
+    /**
+     * _note_: to fix compilation error "Parameter 'xxx' implicitly has an 'any' type"
+     *         need to set the strict to false
+     */
     // "strict": true,
     "strict": false,
     "noImplicitReturns": true,
