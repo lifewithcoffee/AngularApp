@@ -52,6 +52,7 @@ import { CounterModule } from './modules/counter/counter.module';
 import { FetchDataModule } from './modules/fetch-data/fetch-data.module';
 import { UsersModule } from './modules/users/users.module';
 import { WidgetsModule } from './modules/widgets/widgets.module';
+import { EditorsModule } from './modules/editors/editors.module';
 
 const appRoutes: Routes = [
   
@@ -87,6 +88,7 @@ const appRoutes: Routes = [
     CounterModule,
     FetchDataModule,
     UsersModule,
+    EditorsModule,
     WidgetsModule,
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     ReactiveFormsModule,
